@@ -8,7 +8,7 @@
 - Prasannakumar
 - Deepak
 - Chaitanya
-!(Team.png)
+![team](Team.png)
 
 ## Roles
 
