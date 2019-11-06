@@ -29,7 +29,8 @@ const StudentSchema = new mongoose.Schema({
   },
   GPA: {
     type: number,
-    
+    minimum: 0.0,
+    maximum: 4.0,
     required: true,
     default: '0.0'
   },

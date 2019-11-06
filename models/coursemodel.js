@@ -1,11 +1,3 @@
-/**
-*  Developer model
-*  Describes the characteristics of each attribute in a developer resource.
-*
-* @author Denise Case <denisecase@gmail.com>
-* @requires mongoose
-*
-*/
 const mongoose = require('mongoose')
 
 const DeveloperSchema = new mongoose.Schema({
