@@ -1,0 +1,72 @@
+[
+    {
+      "_id": 91,
+      "Given": "Deepak",
+      "Family": "malempati",
+      "Email":"deepak@nwmissouri.edu",
+      "GPA":3.7,
+      "GitHub": "github.com/deepakmalempati",
+      "Website":"www.deepakmalempati.com",
+      "SectionID": 12
+    },
+    {
+        "_id": 92,
+        "Given": "Prasanna",
+        "Family": "Kumar",
+        "Email":"pk@nwmissouri.edu",
+        "GPA":3.2,
+        "GitHub": "github.com/pk",
+        "Website":"www.pk.com",
+        "SectionID": 12
+      },
+      {
+        "_id": 93,
+        "Given": "chaitanya",
+        "Family": "popuri",
+        "Email":"cp@nwmissouri.edu",
+        "GPA":3.1,
+        "GitHub": "github.com/cp",
+        "Website":"www.cp.com",
+        "SectionID": 12
+      },
+      {
+        "_id": 94,
+        "Given": "Yugandar",
+        "Family": "mamidi",
+        "Email":"ymk@nwmissouri.edu",
+        "GPA":3.9,
+        "GitHub": "github.com/ym",
+        "Website":"www.ym.com",
+        "SectionID": 12
+      },
+      {
+        "_id": 95,
+        "Given": "Bharath",
+        "Family": "Malle",
+        "Email":"bm@nwmissouri.edu",
+        "GPA":3.65,
+        "GitHub": "github.com/bm",
+        "Website":"www.bm.com",
+        "SectionID": 12
+          },
+      {
+        "_id": 96,
+        "Given": "Raghu",
+        "Family": "naishadan",
+        "Email":"rn@nwmissouri.edu",
+        "GPA":3.7,
+        "GitHub": "github.com/rn",
+        "Website":"www.rn.com",
+        "SectionID": 12
+      },
+      {
+        "_id": 97,
+        "Given": "abhi",
+        "Family": "Badda",
+        "Email":"ab@nwmissouri.edu",
+        "GPA":3.7,
+        "GitHub": "github.com/ab",
+        "Website":"www.ab.com",
+        "SectionID": 12
+      }
+  ]
