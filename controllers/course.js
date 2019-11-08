@@ -35,7 +35,7 @@ api.get('/findone/:id', (req, res) => {
 
 // GET to this controller base URI (the default)
 api.get('/', (req, res) => {
-  res.render('course/index.ejs', {
+  res.render('course/index', {
     courses: req.app.locals.courses.query
   })
 })
@@ -76,7 +76,7 @@ api.get('/edit/:id', (req, res) => {
   const data = req.app.locals.courses.query
   const item = find(data, { _id: id })
   if (!item) { return res.end(notfoundstring + id) }
-  res.render('course/edit', {
+  res.render('course/edit.ejs', {
     course: item
   })
 })
