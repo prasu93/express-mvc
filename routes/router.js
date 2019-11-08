@@ -15,16 +15,27 @@ const router = express.Router()
 // Manage top-level request first
 router.get('/', (req, res, next) => {
   console.log('Request to /')
-  res.sendFile('index.html')
+  //res.sendFile('index.html')
+  res.render('index');
 })
 
 router.get('/index', (req, res, next) => {
   console.log('Request to /index')
-  res.sendFile('index.html')
+  //res.sendFile('index.html')
+  res.render('index');
 })
 
 // Defer path requests to a particular controller
-router.use('/dev', require('../controllers/developer.js'))
+//router.use('/dev', require('../controllers/developer.js'))
+
+// Defer path requests to a course controller
+router.use('/course', require('../controllers/course.js'))
+
+// Manage top-level request first
+router.get('/course', (req, res, next) => {
+  // res.sendFile('index.html')
+  res.render('index')
+})
 
 console.log('END routing')
 module.exports = router
