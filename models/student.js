@@ -28,7 +28,7 @@ const StudentSchema = new mongoose.Schema({
     unique: true
   },
   GPA: {
-    type: number,
+    type: Number,
     minimum: 0.0,
     maximum: 4.0,
     required: true,
@@ -49,7 +49,7 @@ const StudentSchema = new mongoose.Schema({
     default: 'www.google.com'
   },
   SetionID: {
-    type: number,
+    type: Number,
    required: true,
     default: '12'
   }

@@ -36,5 +36,12 @@ router.get('/course', (req, res, next) => {
   res.render('index')
 })
 
+router.use('/student', require('../controllers/student.js'))
+
+// Manage top-level request first
+router.get('/student', (req, res, next) => {
+  res.render('index')
+})
+
 console.log('END routing')
 module.exports = router

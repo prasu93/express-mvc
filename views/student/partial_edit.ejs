@@ -2,41 +2,27 @@
 <div class=row>
   <div class="col col-xs-12">
 
-    
-
     <div class="form-group">
-      <label for="given">Given name</label>
-      <input type="text" class="form-control" id="given" name="given" value="<%= student.given %>">
+      <label for="schoolNumber">schoolNumber</label>
+      <input type="text" class="form-control" id="schoolNumber" name="schoolNumber" value="<%= student.SchoolNumber %>"
+        required>
     </div>
 
     <div class="form-group">
-      <label for="family">Family name</label>
-      <input type="text" class="form-control" id="family" name="family" value="<%= student.family %>">
+      <label for="courseNumber">courseNumber</label>
+      <input type="text" class="form-control" id="courseNumber" name="courseNumber" value="<%= student.CourseNumber %>">
     </div>
 
     <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" name="email" value="<%= student.email %>" required>
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" name="name" value="<%= student.Name %>">
     </div>
 
     <div class="form-group">
-      <label for="city">GPA </label>
-      <input type="text" class="form-control" id="gpa" name="gpa" value="<%= student.GPA %>">
-    </div>
-
-    <div class="form-group">
-      <label for="state">GitHub </label>
-      <input type="text" class="form-control" id="git" name="git" value="<%= student.GitHub %>">
-    </div>
-
-    <div class="form-group">
-      <label for="zip">Website </label>
-      <input type="text" class="form-control" id="web" name="web" value="<%= student.Website %>">
-    </div>
-
-    <div class="form-group">
-      <label for="country">Section ID </label>
-      <input type="text" class="form-control" id="section" name="section" value="<%= student.sectionID %>">
+      <label for="inSpring">Availability</label><br />
+      <input type="radio" class="ml-3 mr-2" name="availability" value="inSpring">In Spring<br />
+      <input type="radio" class="ml-3 mr-2" name="availability" value="inSummer">In Summer<br />
+      <input type="radio" class="ml-3 mr-2" name="availability" value="inFall">In Fall<br />
     </div>
 
   </div>
@@ -44,7 +30,7 @@
 
 <!-- PUT CLIENT SIDE CODE HERE -->
 <script>
- 
+
   // prevent submission when hitting enter key - optional, but user-friendly 
   document.forms[0].onkeypress = function (e) {
     var key = e.charCode || e.keyCode || 0;
@@ -53,5 +39,5 @@
     }
   }
 
-// END CLIENT SIDE CODE  (close the script tag)
+  // END CLIENT SIDE CODE  (close the script tag)
 </script>
