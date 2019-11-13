@@ -44,7 +44,7 @@ api.get('/', (req, res) => {
 api.get('/create', (req, res) => {
   res.render('student/create', {
     students: req.app.locals.students.query,
-    student: new CourseSchema()
+    student: new StudentSchema()
   })
 })
 
@@ -87,15 +87,16 @@ api.get('/edit/:id', (req, res) => {
 api.post('/save', (req, res) => {
   console.info(`Handling POST ${req}`)
   console.debug(JSON.stringify(req.body))
-  const item = new CourseSchema()
+  const item = new studentSchema()
   console.info(`NEW ID ${req.body._id}`)
   item._id = parseInt(req.body._id)
-  item.schoolNumber = req.body.schoolNumber
-  item.courseNumber = req.body.courseNumber
-  item.name = req.body.name
-  item.inSpring = req.body.inSpring ? true : false
-  item.inSummer = req.body.inSummer ? true : false
-  item.inFall = req.body.inFall ? true : false
+  item.First = req.body.First
+  item.Family = req.body.Family
+  item.Email = req.body.Email
+  item.GPA = req.body.GPA
+  item.GitHub = req.body.GitHub
+  item.Website = req.body.Website
+  item.SectionID = req.body.SectionID
   res.send(`THIS FUNCTION WILL SAVE A NEW student ${JSON.stringify(item)}`)
 })
 
