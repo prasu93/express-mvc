@@ -1,0 +1,65 @@
+[
+    {
+        "_id": 101,
+        "SchoolNumber": "44",
+        "CourseNumber": "563",
+        "Name": "Developing Web Apps and Services",
+        "inSpring": true,
+        "inSummer": false,
+        "inFall": false
+    },
+    {
+        "_id": 102,
+        "SchoolNumber": "44",
+        "CourseNumber": "123",
+        "Name": "Course123",
+        "inSpring": false,
+        "inSummer": false,
+        "inFall": true
+    },
+    {
+        "_id": 103,
+        "SchoolNumber": "44",
+        "CourseNumber": "124",
+        "Name": "Course124",
+        "inSpring": true,
+        "inSummer": false,
+        "inFall": false
+    },
+    {
+        "_id": 104,
+        "SchoolNumber": "44",
+        "CourseNumber": "125",
+        "Name": "Course125",
+        "inSpring": true,
+        "inSummer": false,
+        "inFall": false
+    },
+    {
+        "_id": 105,
+        "SchoolNumber": "44",
+        "CourseNumber": "126",
+        "Name": "Course126",
+        "inSpring": true,
+        "inSummer": false,
+        "inFall": false
+    },
+    {
+        "_id": 106,
+        "SchoolNumber": "44",
+        "CourseNumber": "127",
+        "Name": "Course127",
+        "inSpring": true,
+        "inSummer": false,
+        "inFall": false
+    },
+    {
+        "_id": 107,
+        "SchoolNumber": "44",
+        "CourseNumber": "128",
+        "Name": "Course128",
+        "inSpring": true,
+        "inSummer": false,
+        "inFall": false
+    }
+]
