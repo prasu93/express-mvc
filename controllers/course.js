@@ -101,14 +101,17 @@ api.post('/save', (req, res) => {
   const item = new Model()
   LOG.info(`NEW ID ${req.body._id}`)
   item._id = parseInt(req.body._id)
-  item.SchoolNumber = req.body.SchoolNumber
-  item.CourseNumber = req.body.CourseNumber
-  item.Name = req.body.Name
-  item.inSpring = req.body.inSpring
-  item.inSummer = req.body.inSummer
-  item.inFall = req.body.inFall
+  item.SchoolNumber = req.body.schoolNumber
+  item.CourseNumber = req.body.courseNumber
+  item.Name = req.body.name
+  item.inSpring = req.body.availability === 'inSpring' ? true : false
+  item.inSummer = req.body.availability === 'inSummer' ? true : false
+  item.inFall = req.body.availability === 'inFall' ? true : false
+
   item.save((err) => {
-    if (err) { return res.end('ERROR: item could not be saved') }
+    if (err) { 
+      return res.end('ERROR: item could not be saved' + err.message)
+     }
     LOG.info(`SAVING NEW item ${JSON.stringify(item)}`)
     return res.redirect('/course')
   })
@@ -119,16 +122,19 @@ api.post('/save/:id', (req, res) => {
   LOG.info(`Handling SAVE request ${req}`)
   const id = parseInt(req.params.id)
   LOG.info(`Handling SAVING ID=${id}`)
+
+  let courseData = {
+    schoolNumber: req.body.schoolNumber,
+    courseNumber: req.body.courseNumber,
+    name: req.body.name
+  }
+  courseData.inSpring = req.body.availability === 'inSpring' ? true : false
+  courseData.inSummer = req.body.availability === 'inSummer' ? true : false
+  courseData.inFall = req.body.availability === 'inFall' ? true : false
+
   Model.updateOne({ _id: id },
     { // use mongoose field update operator $set
-      $set: {
-        SchoolNumber: req.body.SchoolNumber,
-        CourseNumber: req.body.CourseNumber,
-        Name: req.body.Name,
-        inSpring: req.body.inSpring,
-        inSummer: req.body.inSummer,
-        inFall: req.body.inFall
-      }
+      $set: courseData
     },
     (err, item) => {
       if (err) { return res.end(notfoundstring) }
