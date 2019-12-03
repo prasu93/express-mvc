@@ -41,8 +41,11 @@ router.get('/student', (req, res, next) => {
 
 
 // Defer path requests to a student controller
-router.use('/section', require('../controllers/student.js'))
-
+router.use('/section', require('../controllers/section.js'))
+// Manage top-level request first
+router.get('/section', (req, res, next) => {
+  res.render('index')
+})
 
 console.log('END routing')
 module.exports = router
