@@ -40,5 +40,9 @@ router.get('/student', (req, res, next) => {
 })
 
 
+// Defer path requests to a student controller
+router.use('/section', require('../controllers/student.js'))
+
+
 console.log('END routing')
 module.exports = router
