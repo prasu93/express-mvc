@@ -89,12 +89,12 @@ api.post('/save', (req, res) => {
   const item = new SectionSchema()
   console.info(`NEW ID ${req.body._id}`)
   item._id = parseInt(req.body._id)
-  item.sectionNumber = req.body.sectionNumber
-  item.days = req.body.days
-  item.startTime = parseInt(req.body.startTime)
-  item.roomNumber = req.body.roomNumber
-  item.instructorId = parseInt(req.body.instructorId)
-  item.courseId = praseInt(req.body.courseId)
+  item.SectionNumber = req.body.sectionNumber
+  item.Days = req.body.days
+  item.StartTime = parseInt(req.body.startTime)
+  item.RoomNumber = req.body.roomNumber
+  item.InstructorID = parseInt(req.body.instructorId)
+  item.CourseID = praseInt(req.body.courseId)
   res.send(`THIS FUNCTION WILL SAVE A NEW Section ${JSON.stringify(item)}`)
 })
 
