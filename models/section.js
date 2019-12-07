@@ -8,42 +8,42 @@ const SectionSchema = new mongoose.Schema({
   },
   SectionNumber: {
     type: String,
-    minlength: 5,
+    minlength: 1,
     maxlength: 100,
     required: true,
     unique: true
   },
   Days: {
     type: String,
-    minlength: 3,
+    minlength: 1,
     maxlength: 100,
     required: false,
     default: 'Given name'
   },
   StartTime: {
     type: String,
-    minlength: 3,
+    minlength: 1,
     maxlength: 100,
     required: false,
     default: 'Family name'
   },
   RoomNumber: {
     type: String,
-    minlength: 3,
+    minlength: 1,
     maxlength: 100,
     required: true,
     default: 'Maryville'
   },
   InstructorID: {
     type: String,
-    minlength: 2,
+    minlength:1,
     maxlength: 100,
     required: true,
     default: 'MO'
   },
   CourseID: {
     type: String,
-    minlength: 5,
+    minlength: 1,
     maxlength: 12,
     required: true,
     default: '64468'
